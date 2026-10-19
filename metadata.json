@@ -1,0 +1,8 @@
+{
+  "name": "profesoraiong公開課形狀",
+  "description": "Profresora Iong 葡語形狀與陰陽性配合教學遊戲：redondo/a、quadrado/a、retangular 與名詞陰陽性搭配，包含回答物件形狀練習、形狀工廠、形狀大聯姻與全套互動遊戲。",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

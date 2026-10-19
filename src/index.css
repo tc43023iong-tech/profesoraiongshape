@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Fredoka:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Fredoka", "Helvetica Neue", Arial, sans-serif;
+  --font-pixel: "Press Start 2P", monospace;
+  --color-mario-red: #E52521;
+  --color-mario-blue: #0043A4;
+  --color-mario-yellow: #FED42C;
+  --color-mario-green: #00A24A;
+  --color-mario-brick: #C84C0C;
+  --color-mario-sky: #5C94FC;
+}
+
+body {
+  font-family: 'Fredoka', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #5C94FC; /* Classic Mario Sky Blue */
+  color: #2D2D2D;
+}
+
+/* Super Mario Retro Aesthetics */
+.mario-sky-bg {
+  background-color: #5c94fc;
+  background-image: 
+    radial-gradient(ellipse at top, #abdbf8, #5c94fc),
+    /* Retro solid white pixel clouds of different positions */
+    radial-gradient(circle at 20% 12%, rgba(255, 255, 255, 0.85) 15px, transparent 15px),
+    radial-gradient(circle at 23% 15%, rgba(255, 255, 255, 0.85) 20px, transparent 20px),
+    radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.85) 15px, transparent 15px),
+    /* Cloud 2 */
+    radial-gradient(circle at 75% 22%, rgba(255, 255, 255, 0.85) 18px, transparent 18px),
+    radial-gradient(circle at 78% 25%, rgba(255, 255, 255, 0.85) 24px, transparent 24px),
+    radial-gradient(circle at 72% 26%, rgba(255, 255, 255, 0.85) 18px, transparent 18px);
+}
+
+/* Mario Retro Box with thick solid borders and flat shadows */
+.mario-box {
+  background-color: #FFFFFF;
+  border: 4px solid #000000;
+  border-radius: 12px;
+  box-shadow: 6px 6px 0px #000000;
+}
+
+.mario-box-accent {
+  background-color: #FFF8E7;
+  border: 4px solid #000000;
+  border-radius: 12px;
+  box-shadow: 6px 6px 0px #000000;
+}
+
+/* 8-bit Style Mario Button */
+.mario-btn {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  border: 3px solid #000000;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0px #000000;
+  transform: translate(0px, 0px);
+  transition: all 0.1s ease;
+}
+.mario-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px #000000;
+}
+.mario-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px #000000;
+}
+
+/* Red Mario Button */
+.mario-btn-red {
+  background-color: #E52521;
+  color: #FFFFFF;
+}
+.mario-btn-red:hover {
+  background-color: #FF3B30;
+}
+
+/* Yellow Coin Button */
+.mario-btn-yellow {
+  background-color: #FED42C;
+  color: #000000;
+}
+.mario-btn-yellow:hover {
+  background-color: #FFE054;
+}
+
+/* Blue Overalls Button */
+.mario-btn-blue {
+  background-color: #0043A4;
+  color: #FFFFFF;
+}
+.mario-btn-blue:hover {
+  background-color: #0d5ccb;
+}
+
+/* Luigi Green Button */
+.mario-btn-green {
+  background-color: #00A24A;
+  color: #FFFFFF;
+}
+.mario-btn-green:hover {
+  background-color: #02c35a;
+}
+
+/* Gray Stone Button */
+.mario-btn-gray {
+  background-color: #8C8C8C;
+  color: #FFFFFF;
+}
+.mario-btn-gray:hover {
+  background-color: #A6A6A6;
+}
+
+/* Question Mark Block "?" Style */
+.mario-qblock {
+  background-color: #FED42C;
+  border: 4px solid #000000;
+  box-shadow: inset -4px -4px 0px 0px #C84C0C, 4px 4px 0px 0px #000000;
+  border-radius: 8px;
+}
+
+/* Brick Block Style */
+.mario-brick {
+  background-color: #C84C0C;
+  border: 4px solid #000000;
+  box-shadow: inset -4px -4px 0px 0px #943000, 4px 4px 0px 0px #000000;
+  border-radius: 4px;
+}
+
+/* Mario Retro Pipe green gradient style */
+.mario-pipe {
+  background: linear-gradient(to right, #148f21, #02c35a 30%, #00a24a 60%, #016f1c);
+  border: 4px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+/* Retro pixel scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #333333;
+  border-left: 3px solid #000000;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #C84C0C;
+  border: 2px solid #000000;
+  image-rendering: pixelated;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #E52521;
+}
+
+/* Mario fonts utilities */
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
+  letter-spacing: -0.05em;
+}
+
+@keyframes mario-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.mario-bounce {
+  animation: mario-bounce 0.8s ease infinite;
+}
+
+@keyframes coin-spin {
+  0% { transform: scaleX(1); }
+  50% { transform: scaleX(0.05); }
+  100% { transform: scaleX(1); }
+}
+.coin-spin {
+  animation: coin-spin 0.6s linear infinite;
+}
